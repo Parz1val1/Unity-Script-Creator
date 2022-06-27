@@ -1,17 +1,17 @@
 {
-    "name": "csharpextensions",
-    "displayName": "C# Extensions",
-    "description": "C# IDE Extensions for VSCode",
-    "author": "KreativJos",
+    "name": "unityscriptcreator",
+    "displayName": "Unity Script Creator",
+    "description": "Extension to create Unity C# scripts and other helpful C# extensions for VSCode",
+    "author": "Parz1val1",
     "license": "MIT",
-    "version": "1.7.0",
-    "publisher": "kreativ-software",
+    "version": "1.0.0",
+    "publisher": "Parz1val1",
     "engines": {
         "vscode": "^1.56.0"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/kreativjos/csharpextensions"
+        "url": "https://github.com/Parz1val1/Unity-Script-Creator"
     },
     "icon": "logo.png",
     "categories": [
@@ -21,153 +21,26 @@
     ],
     "keywords": [
         ".NET",
-        "ASP.NET",
-        ".NET Core",
+        "Unity",
         "dotnet"
     ],
     "activationEvents": [
         "onLanguage:csharp",
-        "onCommand:csharpextensions.createClass",
-        "onCommand:csharpextensions.createEnum",
-        "onCommand:csharpextensions.createInterface",
-        "onCommand:csharpextensions.createController",
-        "onCommand:csharpextensions.createApiController",
-        "onCommand:csharpextensions.createRazorPage",
-        "onCommand:csharpextensions.createUwpPage",
-        "onCommand:csharpextensions.createUwpWindow",
-        "onCommand:csharpextensions.createUwpUserControl",
-        "onCommand:csharpextensions.createUwpResourceFile"
+        "onCommand:csharpextensions.createClass"
     ],
     "main": "./dist/extension",
     "contributes": {
-        "submenus": [
-            {
-                "id": "csharpextensions.new",
-                "label": "New C#"
-            }
-        ],
         "commands": [
             {
                 "command": "csharpextensions.createClass",
-                "title": "Class"
-            },
-            {
-                "command": "csharpextensions.createInterface",
-                "title": "Interface"
-            },
-            {
-                "command": "csharpextensions.createEnum",
-                "title": "Enum"
-            },
-            {
-                "command": "csharpextensions.createStruct",
-                "title": "Struct"
-            },
-            {
-                "command": "csharpextensions.createController",
-                "title": "Controller"
-            },
-            {
-                "command": "csharpextensions.createApiController",
-                "title": "Api Controller"
-            },
-            {
-                "command": "csharpextensions.createRazorPage",
-                "title": "Razor Page"
-            },
-            {
-                "command": "csharpextensions.createUwpPage",
-                "title": "UWP Page"
-            },
-            {
-                "command": "csharpextensions.createUwpWindow",
-                "title": "UWP Window"
-            },
-            {
-                "command": "csharpextensions.createUwpUserControl",
-                "title": "UWP UserControl"
-            },
-            {
-                "command": "csharpextensions.createUwpResourceFile",
-                "title": "UWP Resource File"
-            },
-            {
-                "command": "csharpextensions.createXUnitTest",
-                "title": "XUnit Test"
-            },
-            {
-                "command": "csharpextensions.createNUnitTest",
-                "title": "NUnit Test"
-            },
-            {
-                "command": "csharpextensions.createMSTest",
-                "title": "MSTest"
+                "title": "New Unity C# Script"
             }
         ],
         "menus": {
-            "csharpextensions.new": [
-                {
-                    "group": "00_basics@0",
-                    "command": "csharpextensions.createClass"
-                },
-                {
-                    "group": "00_basics@1",
-                    "command": "csharpextensions.createInterface"
-                },
-                {
-                    "group": "00_basics@2",
-                    "command": "csharpextensions.createEnum"
-                },
-                {
-                    "group": "00_basics@3",
-                    "command": "csharpextensions.createStruct"
-                },
-                {
-                    "group": "10_mvc@0",
-                    "command": "csharpextensions.createController"
-                },
-                {
-                    "group": "10_mvc@1",
-                    "command": "csharpextensions.createApiController"
-                },
-                {
-                    "group": "10_mvc@2",
-                    "command": "csharpextensions.createRazorPage"
-                },
-                {
-                    "group": "20_uwp@0",
-                    "command": "csharpextensions.createUwpPage"
-                },
-                {
-                    "group": "20_uwp@1",
-                    "command": "csharpextensions.createUwpWindow"
-                },
-                {
-                    "group": "20_uwp@2",
-                    "command": "csharpextensions.createUwpUserControl"
-                },
-                {
-                    "group": "20_uwp@3",
-                    "command": "csharpextensions.createUwpResourceFile"
-                },
-                {
-                    "group": "30_test@0",
-                    "command": "csharpextensions.createXUnitTest"
-                },
-                {
-                    "group": "30_test@1",
-                    "command": "csharpextensions.createNUnitTest"
-                },
-                {
-                    "group": "30_test@2",
-                    "command": "csharpextensions.createMSTest"
-                }
-            ],
             "explorer/context": [
                 {
-                    "submenu": "csharpextensions.new",
-                    "group": "navigation@-1",
-                    "when": "explorerResourceIsFolder"
+                    "command": "csharpextensions.createClass",
+                    "group": "navigation"
                 }
             ]
         },

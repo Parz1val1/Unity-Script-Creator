@@ -1,22 +1,13 @@
-# Customized version of https://github.com/jchannon/csharpextensions, -> https://github.com/KreativJos/csharpextensions
+# Customized version of https://github.com/jchannon/csharpextensions, -> https://github.com/Parz1val1/Unity-Script-Creator
 
-# C# Extensions
+# Unity Script Creator
 
-Welcome to C# Extensions.  This VSCode extension provides extensions to the IDE that will hopefully speed up your development workflow.
+Welcome to Unity Script Creator. This VSCode extension provides extensions to the IDE that will hopefully speed up your development workflow.
 
 ## Features
 
-**Add C# Class**
-
-![Add C# Class](./featureimages/newclass.gif)
-
-**Add C# Enum**
-
-![Add C# Enum](./featureimages/newenum.gif)
-
-**Add C# Interface**
-
-![Add C# Interface](./featureimages/newinterface.gif)
+**Add Unity Script**
+Right click in folder structure and select `Unity C# script` to create a default Unity script.
 
 **Add fields from constructors**
 

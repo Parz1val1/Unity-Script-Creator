@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.8.0] - 2022-06-24
+
+### Added
+
+- Remove other C# templates and add Unity script tempate
+
 ## [1.7.0] - 2022-05-02
 
 ### Added

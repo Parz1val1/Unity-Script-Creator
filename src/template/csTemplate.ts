@@ -12,9 +12,9 @@ export default class CsTemplate extends Template {
     protected getOptionalUsings(): string[] {
         return [
             'System',
-            'System.Collections.Generic',
+            'System.Collections',
             'System.Linq',
-            'System.Threading.Tasks',
+            'UnityEngine',
         ];
     }
 

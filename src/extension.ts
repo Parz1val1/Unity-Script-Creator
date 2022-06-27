@@ -5,9 +5,6 @@ import { EOL } from 'os';
 
 import Template from './template/template';
 import CsTemplate from './template/csTemplate';
-import CshtmlTemplate from './template/cshtmlTemplate';
-import ReswTemplate from './template/reswTemplate';
-import XamlTemplate from './template/xamlTemplate';
 import CodeActionProvider from './codeActionProvider';
 import { showAndLogErrorMessage } from './util';
 
@@ -139,27 +136,6 @@ export class Extension {
             this.KnownTemplates = new Map();
 
             this.KnownTemplates.set('class', new CsTemplate('Class', 'createClass'));
-            this.KnownTemplates.set('interface', new CsTemplate('Interface', 'createInterface'));
-            this.KnownTemplates.set('enum', new CsTemplate('Enum', 'createEnum'));
-            this.KnownTemplates.set('struct', new CsTemplate('Struct', 'createStruct'));
-            this.KnownTemplates.set('controller', new CsTemplate('Controller', 'createController', [
-                'System.Diagnostics',
-                'Microsoft.AspNetCore.Mvc',
-                'Microsoft.Extensions.Logging',
-            ]));
-            this.KnownTemplates.set('apicontroller', new CsTemplate('ApiController', 'createApiController', ['Microsoft.AspNetCore.Mvc']));
-            this.KnownTemplates.set('razor_page', new CshtmlTemplate('Razor_Page', 'createRazorPage', [
-                'Microsoft.AspNetCore.Mvc',
-                'Microsoft.AspNetCore.Mvc.RazorPages',
-                'Microsoft.Extensions.Logging',
-            ]));
-            this.KnownTemplates.set('xunit', new CsTemplate('XUnit', 'createXUnitTest', ['XUnit']));
-            this.KnownTemplates.set('nunit', new CsTemplate('NUnit', 'createNUnitTest', ['NUnit.Framework']));
-            this.KnownTemplates.set('mstest', new CsTemplate('MSTest', 'createMSTest', ['Microsoft.VisualStudio.TestTools.UnitTesting']));
-            this.KnownTemplates.set('uwp_page', new XamlTemplate('UWP_Page', 'createUwpPage'));
-            this.KnownTemplates.set('uwp_window', new XamlTemplate('UWP_Window', 'createUwpWindow'));
-            this.KnownTemplates.set('uwp_usercontrol', new XamlTemplate('UWP_UserControl', 'createUwpUserControl'));
-            this.KnownTemplates.set('uwp_resource', new ReswTemplate('UWP_Resource', 'createUwpResourceFile'));
         }
 
         return this.KnownTemplates;
