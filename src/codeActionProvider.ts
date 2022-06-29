@@ -18,8 +18,8 @@ import * as os from 'os';
 
 export default class CodeActionProvider implements VSCodeCodeActionProvider {
     private _commandIds = {
-        ctorFromProperties: 'csharpextensions.ctorFromProperties',
-        initializeMemberFromCtor: 'csharpextensions.initializeMemberFromCtor',
+        ctorFromProperties: 'unityscriptcreator.ctorFromProperties',
+        initializeMemberFromCtor: 'unityscriptcreator.initializeMemberFromCtor',
     };
 
     private static readonly ReadonlyRegex = new RegExp(/(public|private|protected)\s(\w+)\s(\w+)\s?{\s?(get;)\s?(private\s)?(set;)?\s?}/g);
@@ -96,7 +96,7 @@ export default class CodeActionProvider implements VSCodeCodeActionProvider {
     private async formatDocument(documentUri: Uri, edit: WorkspaceEdit, edits: Array<TextEdit>) {
         edit.set(documentUri, edits);
 
-        const reFormatAfterChange = workspace.getConfiguration().get('csharpextensions.reFormatAfterChange', true);
+        const reFormatAfterChange = workspace.getConfiguration().get('unityscriptcreator.reFormatAfterChange', true);
 
         await workspace.applyEdit(edit);
 
@@ -253,8 +253,8 @@ export default class CodeActionProvider implements VSCodeCodeActionProvider {
         if (!parameterType) return;
 
         const tabSize = workspace.getConfiguration().get('editor.tabSize', 4);
-        const privateMemberPrefix = workspace.getConfiguration().get('csharpextensions.privateMemberPrefix', '');
-        const prefixWithThis = workspace.getConfiguration().get('csharpextensions.useThisForCtorAssignments', true);
+        const privateMemberPrefix = workspace.getConfiguration().get('unityscriptcreator.privateMemberPrefix', '');
+        const prefixWithThis = workspace.getConfiguration().get('unityscriptcreator.useThisForCtorAssignments', true);
 
         let memberGeneration: MemberGenerationProperties;
         let title: string;

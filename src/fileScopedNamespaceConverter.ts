@@ -32,7 +32,7 @@ export class FileScopedNamespaceConverter {
      */
     private async shouldUseFileScopedNamespace(filePath: string): Promise<boolean> {
         if (!filePath.endsWith('.cs')) return false;
-        if (!workspace.getConfiguration().get<boolean>('csharpextensions.useFileScopedNamespace', false)) return false;
+        if (!workspace.getConfiguration().get<boolean>('unityscriptcreator.useFileScopedNamespace', false)) return false;
 
         return await this.isTargetFrameworkHigherThanOrEqualToDotNet6(filePath);
     }

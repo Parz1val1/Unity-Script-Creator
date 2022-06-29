@@ -102,8 +102,8 @@ export class Extension {
     private static CurrentVscodeExtension: vscode.Extension<any> | undefined = undefined;
     private static Instance: Extension;
     private static KnownExtensionNames = [
-        'kreativ-software.csharpextensions',
-        'jsw.csharpextensions'
+        'Parz1val1.unityscriptcreator',
+        'jsw.unityscriptcreator'
     ];
 
     public static GetInstance(): Extension {

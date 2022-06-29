@@ -26,7 +26,7 @@ export default abstract class Template {
 
     public getName(): string { return this._name; }
     public getCommand(): string {
-        return `csharpextensions.${this._command}`;
+        return `unityscriptcreator.${this._command}`;
     }
 
     public async getExistingFiles(pathWithoutExtension: string): Promise<string[]> {
@@ -125,7 +125,7 @@ export default abstract class Template {
     }
 
     private getUsings(): string {
-        const includeNamespaces = vscode.workspace.getConfiguration().get('csharpextensions.includeNamespaces', true);
+        const includeNamespaces = vscode.workspace.getConfiguration().get('unityscriptcreator.includeNamespaces', true);
         let usings = this._requiredUsings;
 
         if (includeNamespaces) usings = usings.concat(this.getOptionalUsings());
